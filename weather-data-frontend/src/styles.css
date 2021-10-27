@@ -1,0 +1,30 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+.section {
+  color: #FBFEF9;
+  font-family: Inter,sans-serif;
+
+  display: flex;
+  align-items: center; /* Vertical center alignment */
+  justify-content: center; /* Horizontal center alignment */
+}
+
+.section h1 {
+  margin-top: 0px;
+  font-size: 50px;
+}
+
+.section h2 {
+  font-size: 30px;
+}
+
+.section .title {
+  text-align: center;
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+}

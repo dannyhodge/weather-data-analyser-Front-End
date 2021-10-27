@@ -4,6 +4,12 @@ Front end for the weather data analyser project
 Tools:
 - Angular
 - D3.js
+- Slick
+
+Extensions:
+- Leaflet
+- AngoliaPlaces
+
 
 Learning aims:
 - Angular services
