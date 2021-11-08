@@ -3,15 +3,16 @@ Front end for the weather data analyser project
 
 Tools:
 - Angular
-- D3.js
-- Slick
 
 Extensions:
 - Leaflet
-- AngoliaPlaces
-
+- Algolia Places
+- Ngx-charts
+- Slick
+- DayJS
 
 Learning aims:
 - Angular services
-- D3.js
-- CSS flexbox?
+- Exposure to more libraries
+- Comparing Angular to other frameworks
+- Implement my own auth system
