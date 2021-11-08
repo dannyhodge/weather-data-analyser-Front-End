@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { AngularDayjsModule } from 'angular-dayjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +21,10 @@ import { WindDataComponent } from './wind-data/wind-data.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxChartsModule
+    HttpClientModule,
+    NgxChartsModule,
+    BrowserAnimationsModule,
+    AngularDayjsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
