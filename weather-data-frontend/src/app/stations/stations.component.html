@@ -1,0 +1,16 @@
+<div class="section stations">
+  <div class="title">
+    <h2>Station Locations</h2>
+   
+    <div id="geocoder-container" style="float: left" > </div>
+    <div
+      id="map"
+      style="height: 300px; width: 600px"
+      leaflet
+      [leafletOptions]="options"
+      [leafletLayers]="layers"
+      [leafletCenter]="center"
+      [leafletZoom]="zoom"
+    ></div>
+  </div>
+</div>

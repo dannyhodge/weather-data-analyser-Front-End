@@ -1,11 +1,6 @@
-import { Component, NgModule, OnInit } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { ApiService } from '../api.service';
 import { multi } from '../data';
-import { AngularDayjsService } from 'angular-dayjs';
-import { Dayjs } from 'dayjs';
 import * as dayjs from 'dayjs';
 
 @Component({
@@ -27,7 +22,7 @@ export class TempDataComponent implements OnInit {
   yAxis: boolean = true;
   showYAxisLabel: boolean = true;
   showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Time';
+  xAxisLabel: string = 'Date';
   yAxisLabel: string = 'Temperature';
   timeline: boolean = true;
 
@@ -35,15 +30,27 @@ export class TempDataComponent implements OnInit {
     domain: ['#5AA454', 'yellow', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
   };
 
-  constructor(private apiService: ApiService, private dateService: AngularDayjsService) {  }
+  monthsSelected: number = 12;
+
+  constructor(private apiService: ApiService) {  }
 
   ngOnInit() {
-    this.apiService.getTempData().subscribe((data)=>{
-      console.log('data');
-      console.log(data);
-      this.data = data;
+    this.getTempData();
+  }
 
-      console.log('multi ', multi);
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes)
+  }
+
+  onKey(event: any) { 
+    this.monthsSelected = event.target.value;
+    this.getTempData();
+  }
+
+  getTempData() {
+    this.apiService.getTempData(this.monthsSelected).subscribe((data)=>{
+
+      this.data = data;
 
     });
   }

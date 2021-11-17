@@ -1,6 +1,9 @@
 <div class="section temp">
   <div class="title">
     <h2>Temperature Data</h2>
+    <h3>Over the last {{monthsSelected}} months</h3>
+    <label for="monthsEntered"># of months to view: </label>
+    <input type="text" id="monthsEntered" (keyup)="onKey($event)" />
     <div class="chart-container">
       <ngx-charts-line-chart
         [view]="view"
