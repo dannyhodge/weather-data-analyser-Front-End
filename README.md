@@ -4,15 +4,18 @@ Front end for the weather data analyser project
 Tools:
 - Angular
 
-Extensions:
+Libraries:
 - Leaflet
-- Algolia Places
+- Mapbox Search
 - Ngx-charts
-- Slick
 - DayJS
 
 Learning aims:
 - Angular services
 - Exposure to more libraries
 - Comparing Angular to other frameworks
-- Implement my own auth system
+
+Reflections:
+- Angular services make life significantly easier than in React/Vue, where State Management usually required
+- Angular libraries can be a pain to work with
+- Some things (e.g. chart recalculating) seemed slow, need to see how it performs in other frameworks
